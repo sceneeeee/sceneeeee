@@ -11,7 +11,8 @@ education: BEng Mechatronics and Robotic Systems, XJTLU
 
 interests:
   - Robotics
-  - ROS 2
+  - Robot Navigation
+  - Robotic Manipulation
   - Machine Learning
 
 working_with:
