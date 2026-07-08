@@ -7,7 +7,7 @@
 ## About Me
 
 ```yaml
-education: BEng Mechatronics and Robotic Systems, XJTLU
+education: BEng Mechatronics and Robotic Systems, XJTLU, expected to graduate in 2028.
 
 interests:
   - Robotics
