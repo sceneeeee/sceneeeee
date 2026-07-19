@@ -1,28 +1,45 @@
 <h1 align="center">evenS</h1>
 
 <p align="center">
-  BEng student in Mechatronics and Robotic Systems at XJTLU
+  BEng student in Mechatronics and Robotic Systems at XJTLU<br/>
+  Building ROS 2 robotics systems and vision-language navigation pipelines
 </p>
 
 ## About Me
 
 ```yaml
-education: BEng Mechatronics and Robotic Systems, XJTLU, expected to graduate in 2028.
+education: BEng Mechatronics and Robotic Systems, XJTLU, expected 2028
 
-interests:
-  - Robotics
-  - Robot Navigation
-  - Robotic Manipulation
-  - Machine Learning
+focus:
+  - ROS 2 mobile robotics and autonomous navigation
+  - Vision-Language Navigation and embodied AI
+  - Robot perception, simulation, and learning-based navigation
+
+currently_working_on:
+  - NaVIDA evaluation and adaptation in Habitat
+  - ROS 2 navigation stacks with Nav2, SLAM, and real-robot integration
 
 working_with:
   - C++
   - Python
   - ROS 2
-
-currently_learning:
   - PyTorch
+  - Linux
 ```
+
+## Featured Projects
+
+### [navida-habitat](https://github.com/sceneeeee/navida-habitat)
+
+An independent pipeline for adapting and evaluating NaVIDA in Habitat, including strict action parsing, mock and real simulator adapters, episode logging, and reproducible evaluation protocols.
+
+### [ros2-fishbot](https://github.com/sceneeeee/ros2-fishbot)
+
+A ROS 2 Humble mobile-robot workspace covering URDF/Xacro, Gazebo simulation, `ros2_control`, Nav2 navigation, waypoint following, and autonomous patrol applications.
+
+### [XJTLU-autonomous-vehicle-rtk](https://github.com/sceneeeee/XJTLU-autonomous-vehicle-rtk)
+
+A ROS 2 autonomous-vehicle stack for Jetson Orin NX, integrating FAST-LIO2 and PGO localization, Nav2 MPPI navigation, sensor drivers, GNSS tooling, and STM32 chassis control.
 
 ## Tech Stack
 
@@ -31,6 +48,7 @@ currently_learning:
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/ROS%202-22314E?style=flat&logo=ros&logoColor=white" />
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
   <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
 </p>
