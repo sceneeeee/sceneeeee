@@ -2,7 +2,7 @@
 
 <p align="center">
   BEng student in Mechatronics and Robotic Systems at XJTLU<br/>
-  Building ROS 2 robotics systems and vision-language navigation pipelines
+  Building ROS 2 mobile robots and vision-language navigation systems
 </p>
 
 ## About Me
@@ -20,11 +20,26 @@ currently_working_on:
   - ROS 2 navigation stacks with Nav2 and SLAM
 
 working_with:
-  - C++
-  - Python
-  - ROS 2
-  - PyTorch
-  - Linux
+  languages:
+    - C++
+    - Python
+
+  robotics:
+    - ROS 2
+    - Nav2
+    - ros2_control
+
+  simulation:
+    - Habitat
+    - Gazebo
+
+  machine_learning:
+    - PyTorch
+    - OpenCV
+
+  tools:
+    - Linux
+    - Git
 ```
 
 ## Featured Projects
