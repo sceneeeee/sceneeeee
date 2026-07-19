@@ -44,10 +44,6 @@ working_with:
 
 ## Featured Projects
 
-### [navida-habitat](https://github.com/sceneeeee/navida-habitat)
-
-An independent pipeline for adapting and evaluating NaVIDA in Habitat, including strict action parsing, mock and real simulator adapters, episode logging, and reproducible evaluation protocols.
-
 ### [ros2-fishbot](https://github.com/sceneeeee/ros2-fishbot)
 
 A ROS 2 Humble mobile-robot workspace covering URDF/Xacro, Gazebo simulation, `ros2_control`, Nav2 navigation, waypoint following, and autonomous patrol applications.
