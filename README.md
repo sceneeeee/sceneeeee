@@ -17,7 +17,7 @@ focus:
 
 currently_working_on:
   - NaVIDA evaluation and adaptation in Habitat
-  - ROS 2 navigation stacks with Nav2, SLAM, and real-robot integration
+  - ROS 2 navigation stacks with Nav2 and SLAM
 
 working_with:
   - C++
@@ -36,10 +36,6 @@ An independent pipeline for adapting and evaluating NaVIDA in Habitat, including
 ### [ros2-fishbot](https://github.com/sceneeeee/ros2-fishbot)
 
 A ROS 2 Humble mobile-robot workspace covering URDF/Xacro, Gazebo simulation, `ros2_control`, Nav2 navigation, waypoint following, and autonomous patrol applications.
-
-### [XJTLU-autonomous-vehicle-rtk](https://github.com/sceneeeee/XJTLU-autonomous-vehicle-rtk)
-
-A ROS 2 autonomous-vehicle stack for Jetson Orin NX, integrating FAST-LIO2 and PGO localization, Nav2 MPPI navigation, sensor drivers, GNSS tooling, and STM32 chassis control.
 
 ## Tech Stack
 
