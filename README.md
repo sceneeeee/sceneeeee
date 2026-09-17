@@ -6,11 +6,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/sceneeeee?tab=repositories">Repositories</a>
+  <a href="https://github.com/sceneeeee/ETPNav-MID360-showcase">ETPNav × MID360</a>
   ·
   <a href="https://github.com/sceneeeee/navida-habitat">NaVIDA × Habitat</a>
   ·
   <a href="https://github.com/sceneeeee/ros2-fishbot">ROS 2 FishBot</a>
+  ·
+  <a href="https://github.com/sceneeeee?tab=repositories">Repositories</a>
 </p>
 
 ## About Me
@@ -29,19 +31,15 @@ My current work sits at the intersection of **robot navigation, embodied AI, and
 
 ## Current Research
 
-### ETPNav × MID360
+### [ETPNav × MID360](https://github.com/sceneeeee/ETPNav-MID360-showcase)
 
-I am currently studying how to adapt **ETPNav** from dense RGB-D observations to **MID360-like sparse LiDAR geometry** while preserving as much of the original waypoint, GraphMap, and language-planning pipeline as possible.
+I am studying whether an RGB-D-based VLN system can retain its learned navigation prior when dense depth is replaced by **MID360-like sparse LiDAR geometry**.
 
-Current work includes:
+The project currently focuses on the waypoint interface while keeping the downstream **GraphMap and language/topological planning pipeline** frozen whenever possible. Work so far includes explicit-geometry waypoint baselines, proposal–GraphMap interface analysis, sparse-depth zero-shot experiments, activation-level failure forensics, and feature-domain adaptation studies.
 
-- controlled experiments in **Habitat / R2R-CE / Matterport3D**;
-- analysis of the sensor-domain gap between dense depth and sparse LiDAR observations;
-- explicit-geometry waypoint proposal baselines;
-- waypoint-predictor failure forensics and feature-space adaptation;
-- a learned sparse-to-dense feature adapter before navigation-level validation.
+The longer-term path is **Habitat / R2R-CE → Isaac Sim native LiDAR → Livox MID360 + real robot navigation**.
 
-The longer-term path is **Habitat → Isaac Sim → real Livox MID360 + robot navigation stack**.
+**Public research materials:** [Research Showcase](https://github.com/sceneeeee/ETPNav-MID360-showcase) · [Application Summary](https://github.com/sceneeeee/ETPNav-MID360-showcase/blob/main/docs/APPLICATION_SUMMARY.md) · [Detailed Overview](https://github.com/sceneeeee/ETPNav-MID360-showcase/blob/main/docs/RESEARCH_OVERVIEW.md)
 
 ## Selected Projects
 
