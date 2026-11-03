@@ -1,90 +1,118 @@
 <h1 align="center">evenS</h1>
 
 <p align="center">
-  BEng student in Mechatronics and Robotic Systems at XJTLU<br/>
-  Working on Vision-and-Language Navigation, embodied AI, and autonomous mobile robots
+  BEng student in <strong>Mechatronics and Robotic Systems</strong> at Xi'an Jiaotong-Liverpool University (XJTLU)<br/>
+  Expected graduation: 2028<br/>
+  <strong>Robotics · Embodied AI · Autonomous Navigation</strong>
 </p>
 
 <p align="center">
+  <a href="https://github.com/sceneeeee/room-sign-guided-navigation">Room-Sign Navigation</a>
+  ·
   <a href="https://github.com/sceneeeee/ETPNav-MID360-showcase">ETPNav × MID360</a>
   ·
   <a href="https://github.com/sceneeeee/navida-habitat">NaVIDA × Habitat</a>
   ·
-  <a href="https://github.com/sceneeeee/ros2-fishbot">ROS 2 FishBot</a>
-  ·
-  <a href="https://github.com/sceneeeee?tab=repositories">Repositories</a>
+  <a href="https://github.com/sceneeeee?tab=repositories">All repositories</a>
 </p>
 
-## About Me
+---
 
-I am an undergraduate student at **Xi'an Jiaotong-Liverpool University (XJTLU)**, pursuing a BEng in **Mechatronics and Robotic Systems** (expected 2028).
+## About
 
-My current work sits at the intersection of **robot navigation, embodied AI, and robot perception**. I am particularly interested in how learned navigation policies can be connected to geometric sensing and deployed on practical robotic systems.
+I am an undergraduate engineering student interested in **robot navigation, embodied AI, and perception-grounded decision making**.
+
+My work focuses on connecting visual and language-based reasoning with geometric perception and practical robot systems. I am particularly interested in how navigation methods can remain interpretable, experimentally testable, and transferable from simulation to real platforms.
 
 **Research interests**
-
-- Vision-and-Language Navigation (VLN)
-- Embodied AI and robot navigation
-- LiDAR / RGB-D perception for navigation
-- Learning-based waypoint proposal and topological planning
-- ROS 2, Nav2, simulation, and robot deployment
+- Vision-and-Language Navigation (VLN) and embodied navigation
+- RGB-based semantic search and landmark-guided reasoning
+- RGB-D / LiDAR perception for mobile robots
+- Waypoint prediction, topological planning, and navigation evaluation
+- ROS 2-based robot integration and edge deployment
 
 ## Current Research
 
+### [Room & Sign-Guided Indoor Navigation](https://github.com/sceneeeee/room-sign-guided-navigation)
+
+An **RGB-first, human-in-the-loop** project exploring how room numbers and directional signs can guide search in unfamiliar indoor environments.
+
+The system is designed around visual observations, OCR evidence, physical-door association, landmark memory, and high-level search decisions. The current implementation is a research prototype, not a completed autonomous room-search system.
+
+**Progress**
+- **M0:** The camera-capture, OCR, review, and export workflow has been merged into main.
+- **M2.1–M2.4:** Evidence-aware landmark memory, a rule-based baseline, constrained text-LLM planning, Qwen3-4B integration, offline evaluation, and JSONL event streaming have been implemented in development branches.
+- **Integration prototype:** [Draft PR #4](https://github.com/sceneeeee/room-sign-guided-navigation/pull/4) integrates M0 with M2.4 and adds an OCR-event adapter, RGB candidate detection, short-term visual tracking, and bounded human-confirmed visual guidance. These additions have offline tests, but still require real-camera validation.
+
+**My contributions**
+- M2.1–M2.4 reasoning and evaluation
+- LandmarkMemory and evidence-aware rule-based reasoning
+- Qwen3-4B text planner and constrained decision validation
+- Offline evaluation framework and regression tests
+- M1/M2 integration, M3/M4 integration design, and evaluation methodology
+
+**Collaborator-led work:** the M0 camera/OCR field workflow and M1 room-sign perception / physical cross-frame association.
+
+**Validation boundary:** robust physical-door association, real-camera integration, and controlled multi-door search evaluation remain ongoing. The complete search loop has **not** yet been demonstrated in the field.
+
 ### [ETPNav × MID360](https://github.com/sceneeeee/ETPNav-MID360-showcase)
 
-I am studying whether an RGB-D-based VLN system can retain its learned navigation prior when dense depth is replaced by **MID360-like sparse LiDAR geometry**.
+Research on adapting an RGB-D-based Vision-and-Language Navigation system to **MID360-inspired sparse LiDAR geometry**, while keeping the downstream GraphMap and language/topological planning pipeline as stable as possible.
 
-The project currently focuses on the waypoint interface while keeping the downstream **GraphMap and language/topological planning pipeline** frozen whenever possible. Work so far includes explicit-geometry waypoint baselines, proposal–GraphMap interface analysis, sparse-depth zero-shot experiments, activation-level failure forensics, and feature-domain adaptation studies.
+The experimental progression includes:
+- Reproducing and instrumenting the ETPNav / Habitat baseline
+- Testing explicit-geometry waypoint proposals
+- Evaluating sparse-depth zero-shot input
+- Tracing waypoint-prediction failure through intermediate activations
+- Testing and rejecting simple feature-statistics alignment as an insufficient adaptation
+- Investigating learned sparse-to-dense feature adaptation as the current direction
 
-The longer-term path is **Habitat / R2R-CE → Isaac Sim native LiDAR → Livox MID360 + real robot navigation**.
+The public [research showcase](https://github.com/sceneeeee/ETPNav-MID360-showcase) summarizes the research safely. Active training details, checkpoints, and unpublished results are not presented as public results. Physical MID360 deployment has not yet been claimed.
 
-**Public research materials:** [Research Showcase](https://github.com/sceneeeee/ETPNav-MID360-showcase) · [Application Summary](https://github.com/sceneeeee/ETPNav-MID360-showcase/blob/main/docs/APPLICATION_SUMMARY.md) · [Detailed Overview](https://github.com/sceneeeee/ETPNav-MID360-showcase/blob/main/docs/RESEARCH_OVERVIEW.md)
+## Selected Engineering Projects
 
-## Selected Projects
+### [NaVIDA × Habitat](https://github.com/sceneeeee/navida-habitat)
 
-### [navida-habitat](https://github.com/sceneeeee/navida-habitat)
+Integrated the official NaVIDA-3B checkpoint with a stateful inference service and Habitat execution:
+- 4-bit checkpoint loading on an RTX 4060 Ti 8GB
+- Historical RGB observation handling and strict action-chunk parsing
+- HTTP inference service and episode lifecycle management
+- Model output → action parser → Habitat env.step() integration
+- Multi-step smoke tests and auditable trajectory / latency logs
 
-A paper-oriented integration of the official **NaVIDA** checkpoint with Habitat. The project implements a stateful inference service, historical RGB observation handling, strict action-chunk parsing, and closed-loop Habitat execution.
+This validates an engineering integration path; it is **not** a standard R2R benchmark reproduction.
 
-Highlights:
+### [ROS 2 FishBot](https://github.com/sceneeeee/ros2-fishbot)
 
-- official NaVIDA-3B checkpoint running in **4-bit on an RTX 4060 Ti 8GB**;
-- paper-pure RGB + language inference protocol;
-- stateful localhost HTTP service and episode lifecycle;
-- end-to-end model → action parser → `env.step()` smoke testing;
-- auditable logging for actions, latency, trajectories, and evaluation outputs.
+A ROS 2 Humble mobile-robot workspace covering:
+- URDF / Xacro robot description
+- Gazebo Classic simulation
+- ros2_control differential-drive control
+- Nav2 localization, planning, and waypoint navigation
+- Patrol behaviors and camera capture
 
-### [ros2-fishbot](https://github.com/sceneeeee/ros2-fishbot)
+### [Bililive Recording & Upload Pipeline](https://github.com/sceneeeee/bililive-record-upload-pipeline)
 
-A **ROS 2 Humble** mobile-robot workspace covering the main navigation software chain:
+A reproducible integration of recording, upload, retry, monitoring, and persistent cleanup workflows using Docker Compose, systemd, and SQLite-backed state tracking. The public repository documents its validation boundaries; natural-live end-to-end operation is still pending further verification.
 
-`URDF / Xacro → Gazebo → ros2_control → Nav2 → waypoint navigation → autonomous patrol`
+### [Lecture-Grounded Tutorial Explainer](https://github.com/sceneeeee/lecture-grounded-tutorial-explainer)
 
-It includes robot description, differential-drive control, localization/navigation configuration, Python navigation examples, custom services, patrol behaviors, and camera capture.
+A reusable ChatGPT Skill for explaining tutorials from supplied lecture materials, preserving source notation and connecting lecture concepts to step-by-step problem solving.
 
-### [VLN](https://github.com/sceneeeee/VLN)
+## Tools & Technologies
 
-A deployment-oriented VLN scaffold connecting a **Jetson-side ROS 2 robot** with a remote GPU inference server. It covers camera history, remote NaVIDA inference, bounded action execution, `/cmd_vel`, and the STM32 serial chassis bridge.
+**Programming:** Python, C++
 
-## Technical Stack
+**Robotics:** ROS 2, Nav2, Gazebo Classic, Habitat
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/ROS%202-22314E?style=flat&logo=ros&logoColor=white" />
-  <img src="https://img.shields.io/badge/Nav2-22314E?style=flat&logo=ros&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/Habitat-111111?style=flat" />
-  <img src="https://img.shields.io/badge/Gazebo-F58113?style=flat" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
-</p>
+**Perception & AI:** PyTorch, OpenCV, OCR, Vision-Language Models
 
-## Currently Learning / Building Toward
+**Development:** Linux, Git, Docker
 
-- stronger VLN experimentation and evaluation methodology;
-- LiDAR-aware navigation perception;
-- Isaac Sim robotics workflows;
-- deployment-aware embodied navigation on edge robotics platforms.
+These are technologies used across my projects, rather than a claim of equal proficiency in every tool.
+
+## Research Approach
+
+I value controlled experiments, explicit system boundaries, reproducible evaluation, and honest reporting of negative results. I distinguish offline tests, simulation results, field observations, and benchmark results rather than treating them as interchangeable.
+
+**Longer-term direction:** Isaac Sim, LiDAR-equipped mobile robots, and deployment-aware embodied navigation.
