@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/sceneeeee/room-sign-guided-navigation">Room-Sign Navigation</a>
   ·
-  <a href="https://github.com/sceneeeee/ETPNav-MID360-showcase">ETPNav × MID360</a>
+  <a href="https://github.com/sceneeeee/ETPNav-MID360">ETPNav × MID360</a>
   ·
   <a href="https://github.com/sceneeeee/navida-habitat">NaVIDA × Habitat</a>
   ·
