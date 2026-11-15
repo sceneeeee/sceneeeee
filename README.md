@@ -55,19 +55,13 @@ The system is designed around visual observations, OCR evidence, physical-door a
 
 **Validation boundary:** robust physical-door association, real-camera integration, and controlled multi-door search evaluation remain ongoing. The complete search loop has **not** yet been demonstrated in the field.
 
-### [ETPNav × MID360](https://github.com/sceneeeee/ETPNav-MID360-showcase)
+## Completed Research & Engineering Projects
 
-Research on adapting an RGB-D-based Vision-and-Language Navigation system to **MID360-inspired sparse LiDAR geometry**, while keeping the downstream GraphMap and language/topological planning pipeline as stable as possible.
+### [ETPNav × MID360](https://github.com/sceneeeee/ETPNav-MID360)
 
-The experimental progression includes:
-- Reproducing and instrumenting the ETPNav / Habitat baseline
-- Testing explicit-geometry waypoint proposals
-- Evaluating sparse-depth zero-shot input
-- Tracing waypoint-prediction failure through intermediate activations
-- Testing and rejecting simple feature-statistics alignment as an insufficient adaptation
-- Investigating learned sparse-to-dense feature adaptation as the current direction
+A discontinued research exploration of adapting ETPNav waypoint proposals to MID360-inspired sparse-depth geometry. The work includes explicit geometry variants (Geometry V0, BNMS, MRU, G-Min), sparse-depth zero-shot failure analysis, activation-level forensics, and a negative result showing simple feature-statistics alignment was insufficient.
 
-The public [research showcase](https://github.com/sceneeeee/ETPNav-MID360-showcase) summarizes the research safely. Active training details, checkpoints, and unpublished results are not presented as public results. Physical MID360 deployment has not yet been claimed.
+The line was stopped before learned-adapter held-out validation, formal VLN benchmarking, Isaac Sim runtime, or physical MID360 deployment. The repository preserves the experiments and closeout record; it is **not current research**.
 
 ## Selected Engineering Projects
 
@@ -84,12 +78,7 @@ This validates an engineering integration path; it is **not** a standard R2R ben
 
 ### [ROS 2 FishBot](https://github.com/sceneeeee/ros2-fishbot)
 
-A ROS 2 Humble mobile-robot workspace covering:
-- URDF / Xacro robot description
-- Gazebo Classic simulation
-- ros2_control differential-drive control
-- Nav2 localization, planning, and waypoint navigation
-- Patrol behaviors and camera capture
+A completed **simulation-only** ROS 2 Humble workspace covering URDF/Xacro, Gazebo Classic, ros2_control differential drive, Nav2 maps/parameters, waypoint navigation, and a configurable patrol application with speech service and camera capture. No physical FishBot was purchased or deployed; hardware validation remains out of scope.
 
 ### [Bililive Recording & Upload Pipeline](https://github.com/sceneeeee/bililive-record-upload-pipeline)
 
